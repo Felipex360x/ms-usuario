@@ -1,0 +1,435 @@
+{
+  "info": {
+    "_postman_id": "916c3271-7ffd-4a2a-b07e-520176bcd662",
+    "name": "Pruebas usuario",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "29078882"
+  },
+  "item": [
+    {
+      "name": "usuario listar",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "13.219.97.37:8080/api/v2/usuarios",
+          "host": [
+            "13",
+            "219",
+            "97",
+            "37"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v2",
+            "usuarios"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "usuario listar",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "13.219.97.37:8080/api/v2/usuarios",
+              "host": [
+                "13",
+                "219",
+                "97",
+                "37"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v2",
+                "usuarios"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 17 May 2026 20:30:01 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"id\": 2,\n        \"nombre\": \"Matias\",\n        \"apellidoP\": \"Castillo\",\n        \"apellidoM\": \"Rojas\",\n        \"nombreUser\": \"Mati6767\",\n        \"correo\": \"mati.rojas@gmail.com\",\n        \"password\": \"sixseven\",\n        \"edad\": 25,\n        \"genero\": \"Masculino\",\n        \"tipoUser\": \"Comprador,Vendedor\"\n    },\n    {\n        \"id\": 6,\n        \"nombre\": \"fabian\",\n        \"apellidoP\": \"Villa\",\n        \"apellidoM\": \"Lobos\",\n        \"nombreUser\": \"Mati6767\",\n        \"correo\": \"fabi.Lobos@gmail.com\",\n        \"password\": \"32321\",\n        \"edad\": 34,\n        \"genero\": \"Masculino\",\n        \"tipoUser\": \"Comprador,Vendedor\"\n    },\n    {\n        \"id\": 7,\n        \"nombre\": \"Leo\",\n        \"apellidoP\": \"Ignacio\",\n        \"apellidoM\": \"Fuentes\",\n        \"nombreUser\": \"leoig21\",\n        \"correo\": \"leoleo@gmail.com\",\n        \"password\": \"mish mihs\",\n        \"edad\": 25,\n        \"genero\": \"Masculino\",\n        \"tipoUser\": \"Comprador\"\n    },\n    {\n        \"id\": 8,\n        \"nombre\": \"Leo\",\n        \"apellidoP\": \"Ignacio\",\n        \"apellidoM\": \"Fuentes\",\n        \"nombreUser\": \"leoig21\",\n        \"correo\": \"leoleo@gmail.com\",\n        \"password\": \"mish mihs\",\n        \"edad\": 25,\n        \"genero\": \"Masculino\",\n        \"tipoUser\": \"Comprador\"\n    },\n    {\n        \"id\": 9,\n        \"nombre\": \"Leo\",\n        \"apellidoP\": \"Ignacio\",\n        \"apellidoM\": \"Fuentes\",\n        \"nombreUser\": \"leoig21\",\n        \"correo\": \"leoleo@gmail.com\",\n        \"password\": \"mish mihs\",\n        \"edad\": 25,\n        \"genero\": \"Masculino\",\n        \"tipoUser\": \"Comprador\"\n    },\n    {\n        \"id\": 10,\n        \"nombre\": \"Leo\",\n        \"apellidoP\": \"Ignacio\",\n        \"apellidoM\": \"Fuentes\",\n        \"nombreUser\": \"leoig21\",\n        \"correo\": \"leoleo@gmail.com\",\n        \"password\": \"mish mihs\",\n        \"edad\": 25,\n        \"genero\": \"Masculino\",\n        \"tipoUser\": \"Comprador\"\n    },\n    {\n        \"id\": 11,\n        \"nombre\": \"fabian\",\n        \"apellidoP\": \"Ignacio\",\n        \"apellidoM\": \"Fuentes\",\n        \"nombreUser\": \"fabiooig21\",\n        \"correo\": \"fabifabieo@gmail.com\",\n        \"password\": \"mish mihs\",\n        \"edad\": 25,\n        \"genero\": \"Masculino\",\n        \"tipoUser\": \"Comprador\"\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Usuario validacion",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "13.219.97.37:8080/api/v2/usuarios",
+          "host": [
+            "13",
+            "219",
+            "97",
+            "37"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v2",
+            "usuarios"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Usuario validacion",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "13.219.97.37:8080/api/v2/usuarios",
+              "host": [
+                "13",
+                "219",
+                "97",
+                "37"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v2",
+                "usuarios"
+              ]
+            }
+          },
+          "status": "Bad Request",
+          "code": 400,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 17 May 2026 20:30:46 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "close"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"genero\": \"el genero no puede estar vacio\",\n    \"correo\": \"el Correo  no puede estar vacio\",\n    \"nombre\": \"el nombre no puede estar vacio\",\n    \"password\": \"la contraseña no puede estar vacio\",\n    \"nombreUser\": \"el Nombre de usuario no puede estar vacio\",\n    \"tipoUser\": \"ingrese el tipo de usuario vendedor o comprador\",\n    \"apellidoM\": \"el Apellido Materno no puede estar vacio\",\n    \"apellidoP\": \"el Apellido Paterno no puede estar vacio\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Usuario agregar",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n        \"nombre\": \"miguel\",\r\n        \"apellidoP\": \"jose\",\r\n        \"apellidoM\": \"jose\",\r\n        \"nombreUser\": \"Mati6767\",\r\n        \"correo\": \"mjojose@gmail.com\",\r\n        \"password\": \"sixseven\",\r\n        \"edad\": 25,\r\n        \"genero\": \"Masculino\",\r\n        \"tipoUser\": \"Comprador,Vendedor\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "13.219.97.37:8080/api/v2/usuarios",
+          "host": [
+            "13",
+            "219",
+            "97",
+            "37"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v2",
+            "usuarios"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Usuario agregar",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n        \"nombre\": \"miguel\",\r\n        \"apellidoP\": \"jose\",\r\n        \"apellidoM\": \"jose\",\r\n        \"nombreUser\": \"Mati6767\",\r\n        \"correo\": \"mjojose@gmail.com\",\r\n        \"password\": \"sixseven\",\r\n        \"edad\": 25,\r\n        \"genero\": \"Masculino\",\r\n        \"tipoUser\": \"Comprador,Vendedor\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "13.219.97.37:8080/api/v2/usuarios",
+              "host": [
+                "13",
+                "219",
+                "97",
+                "37"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v2",
+                "usuarios"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 17 May 2026 20:32:01 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": 12,\n    \"nombre\": \"miguel\",\n    \"apellidoP\": \"jose\",\n    \"apellidoM\": \"jose\",\n    \"nombreUser\": \"Mati6767\",\n    \"correo\": \"mjojose@gmail.com\",\n    \"password\": \"sixseven\",\n    \"edad\": 25,\n    \"genero\": \"Masculino\",\n    \"tipoUser\": \"Comprador,Vendedor\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \r\n    \"nombre\": \"fabi\",\r\n    \"apellidoP\": \"Ignacio\",\r\n    \"apellidoM\": \"Fuentes\",\r\n    \"nombreUser\": \"leoig21\",\r\n    \"correo\": \"fabifabi@gmail.com\",\r\n    \"password\": \"lovemiku\",\r\n    \"edad\": 25,\r\n    \"genero\": \"Masculino\",\r\n    \"tipoUser\": \"Comprador\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "13.219.97.37:8080/api/v2/usuarios/7",
+          "host": [
+            "13",
+            "219",
+            "97",
+            "37"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v2",
+            "usuarios",
+            "7"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "actualizar usuario",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \r\n    \"nombre\": \"fabi\",\r\n    \"apellidoP\": \"Ignacio\",\r\n    \"apellidoM\": \"Fuentes\",\r\n    \"nombreUser\": \"leoig21\",\r\n    \"correo\": \"fabifabi@gmail.com\",\r\n    \"password\": \"lovemiku\",\r\n    \"edad\": 25,\r\n    \"genero\": \"Masculino\",\r\n    \"tipoUser\": \"Comprador\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "13.219.97.37:8080/api/v2/usuarios/7",
+              "host": [
+                "13",
+                "219",
+                "97",
+                "37"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v2",
+                "usuarios",
+                "7"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Transfer-Encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 17 May 2026 20:50:33 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": 7,\n    \"nombre\": \"fabi\",\n    \"apellidoP\": \"Ignacio\",\n    \"apellidoM\": \"Fuentes\",\n    \"nombreUser\": \"leoig21\",\n    \"correo\": \"fabifabi@gmail.com\",\n    \"password\": \"lovemiku\",\n    \"edad\": 25,\n    \"genero\": \"Masculino\",\n    \"tipoUser\": \"Comprador\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": [
+        {
+          "name": "New Request",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "13.219.97.37:8080/api/v2/usuarios/7",
+              "host": [
+                "13",
+                "219",
+                "97",
+                "37"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "v2",
+                "usuarios",
+                "7"
+              ]
+            }
+          },
+          "status": "No Content",
+          "code": 204,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Date",
+              "value": "Sun, 17 May 2026 20:51:23 GMT"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=60"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            }
+          ],
+          "cookie": [],
+          "body": null
+        }
+      ]
+    }
+  ]
+}
