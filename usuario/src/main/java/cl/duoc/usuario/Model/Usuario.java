@@ -30,6 +30,8 @@ import lombok.Data;
 
 @Data
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 public class Usuario {
 
     @Id
