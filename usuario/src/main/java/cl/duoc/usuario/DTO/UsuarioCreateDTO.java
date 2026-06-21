@@ -12,7 +12,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class UsuarioCreateDTO {
 
-  
     @Schema(description = "Nombre del Usuario", example = "maximo")
     @NotBlank(message = "el nombre no puede estar vacio")
     private String nombre;

@@ -18,7 +18,7 @@ class UsuarioTest {
     @DisplayName("Contructor completo - debe Asignar todos los campos correctomante ")
     void constructorCompletoDebeAsignarTodosLosCampos(){
         Usuario usuario = new  Usuario(
-            1L,"Maximo","peres","rojas","Maximo4312","maximomango@gmail.com","ColoColoheart",25,"masculino","comprador"
+            1L,"Felipe","Acuña","Gonzalez","felipe123","felipe@gmail.com","123456",25,"Masculino","Comprador"
         );
 
         assertEquals(1L, usuario.getId());
