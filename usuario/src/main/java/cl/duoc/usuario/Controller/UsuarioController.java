@@ -37,12 +37,12 @@ public class UsuarioController {
     private UsuarioService usuarioService;
 
 
+/*          Listado de Usuarios mas la busqueda por Id                  */
     @Operation(
         summary = "Listar todas los Usuarios",
         description = "Retorna la lista completa de Usuarios registradas en el sistema."
     )
     @ApiResponse(responseCode = "200", description = "Lista obtenida exitosamente")
-
 
     @GetMapping
     public ResponseEntity<List<UsuarioDTO>>getAll(){
@@ -55,49 +55,76 @@ public class UsuarioController {
         @ApiResponse(responseCode = "404", description = "Usuario no encontrada")
     })
     @GetMapping("/{id}")
-    public ResponseEntity<UsuarioDTO> getById(@Parameter(description = "Id unico de la mascota",required = true)@PathVariable Long id) {
+    public ResponseEntity<UsuarioDTO> getById(@Parameter(description = "Id unico de la Usuario",required = true)@PathVariable Long id) {
         return ResponseEntity.ok(usuarioService.findById(id));
     }
 
 
 
 
-
+/** crear usuario */
     @Operation(summary = "Registrar nueva Usuario")
     @ApiResponse(responseCode = "201", description = "Usuario creada exitosamente")
+    @ApiResponse(responseCode = "400", description = "Datos de entrada inválidos")
     @PostMapping
-    public ResponseEntity<UsuarioDTO> crear(@Valid @RequestBody UsuarioCreateDTO dto) {
+    public ResponseEntity<UsuarioDTO> crear(
+            @io.swagger.v3.oas.annotations.parameters.RequestBody(
+                description = "Datos del nuevo producto"
+            )
+            @Valid @RequestBody UsuarioCreateDTO dto) {
         return ResponseEntity.status(HttpStatus.CREATED).body(usuarioService.crear(dto));
     }
 
+
+
+
+
+
+/**actualizar usuario por id */
     @Operation(summary = "Actualizar Usuario existente")
     @ApiResponses({
         @ApiResponse(responseCode = "200", description = "Actualización exitosa"),
-        @ApiResponse(responseCode = "404", description = "Usuario no encontrada")
+        @ApiResponse(responseCode = "404", description = "Usuario no encontrada"),
+        @ApiResponse(responseCode = "400", description = "Datos de entrada inválidos")
     })
     @PutMapping("/{id}")
-    public ResponseEntity<UsuarioDTO> actualizar(@Parameter(description = "Ide de la mascota a actualizar")@PathVariable Long id, @Valid @RequestBody UsuarioCreateDTO dto) {
+    public ResponseEntity<UsuarioDTO> actualizar(
+            @Parameter(description = "ID del Usuario a actualizar", required = true)
+            @PathVariable Long id,
+            @io.swagger.v3.oas.annotations.parameters.RequestBody(
+                description = "Nuevos datos del Usuario"
+            )
+            @Valid @RequestBody UsuarioCreateDTO dto) {
         return ResponseEntity.ok(usuarioService.actualizar(id, dto));
     }
 
+/**Eliminar usuario por id */
     @Operation(summary = "Eliminar Usuario")
     @ApiResponses({
         @ApiResponse(responseCode = "200", description = "Eliminación exitosa"),
         @ApiResponse(responseCode = "404", description = "Usuario no encontrada")
     })
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> eliminar(@Parameter(description = "Ide de la mascota a eliminar")@PathVariable Long id) {
+      public ResponseEntity<Void> eliminar(
+            @Parameter(description = "ID del Usuario a eliminar", required = true)
+            @PathVariable Long id) {
         usuarioService.eliminar(id);
         return ResponseEntity.noContent().build();
     }
 
 
 
+/**validacioon manual de correo existente */
 
 
-
+    @Operation(summary ="Validacion de correo existnte")
+    @ApiResponses({
+        /*errores en la validacion manual del correo porblema con los code */
+        @ApiResponse(responseCode ="500",description ="Correo no  existente"),
+        @ApiResponse(responseCode="400",description ="Correo existente")
+    })
     @PostMapping("/manual")
-    public ResponseEntity<?> crearConValidacionManual(@RequestBody UsuarioCreateDTO dto){
+    public ResponseEntity<?> crearConValidacionManual(@Parameter(description = "ingrese el post para ver si correo existe")@RequestBody UsuarioCreateDTO dto){
         List<String> errores = usuarioService.validarUsuarioManual(dto);
         if(!errores.isEmpty()){
             return new ResponseEntity<>(errores, HttpStatus.BAD_REQUEST);
@@ -108,5 +135,3 @@ public class UsuarioController {
 
 
 
-
-}
